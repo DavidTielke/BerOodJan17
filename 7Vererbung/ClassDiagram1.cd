@@ -10,7 +10,7 @@
   <Class Name="_7Vererbung.Auto">
     <Position X="4.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAIAAAAAAAAAAABAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Auto.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -38,14 +38,14 @@
   <Class Name="_7Vererbung.Flugzeug">
     <Position X="6.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQAA=</HashCode>
+      <HashCode>AgAAAAAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAQAA=</HashCode>
       <FileName>Flugzeug.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="_7Vererbung.Fahrzeug">
     <Position X="5.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAEACAAAAQBAAAAAAIAAAGAAAAgAAAAAAQAAAA=</HashCode>
+      <HashCode>AAAQAAAEACAAAAQBAAABAAIAAAGAAAAgAAAAAAQAAAA=</HashCode>
       <FileName>Fahrzeug.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

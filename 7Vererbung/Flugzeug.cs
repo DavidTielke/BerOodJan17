@@ -40,5 +40,10 @@ namespace _7Vererbung
         {
             Tankstand -= Verbrauch/100*strecke;
         }
+
+        public override string GetKennung()
+        {
+            return "D-4711";
+        }
     }
 }

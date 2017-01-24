@@ -23,11 +23,15 @@ namespace _7Vererbung
             };
         }
 
+        public override string GetKennung()
+        {
+            return "WBA2342344234234234324X";
+        }
+
         public override void Reise(double strecke)
         {
             base.Reise(strecke);
             KmStand += strecke;
         }
-
     }
 }

@@ -5,4 +5,11 @@ using System.Text;
 
 namespace _7Vererbung
 {
+    class Motorrad : Fahrzeug
+    {
+        public override string GetKennung()
+        {
+            return "BRUM BRUM";
+        }
+    }
 }

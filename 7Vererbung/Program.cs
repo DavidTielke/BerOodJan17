@@ -23,12 +23,15 @@ namespace _7Vererbung
             foreach (var fahrzeug in fahrzeuge)
             {
                 fahrzeug.Reise(300);
+                Console.WriteLine(fahrzeug.GetKennung());
 
                 if (fahrzeug is Auto)
                 {
                     var auto = (Auto) fahrzeug;
                     Console.WriteLine(auto.KmStand);
                 }
+
+                fahrzeug.Tanke(20);
             }
 
 

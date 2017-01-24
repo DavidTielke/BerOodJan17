@@ -36,7 +36,7 @@ namespace _7Vererbung
             Console.WriteLine("Tanke " + menge + " L");
         }
 
-
+        public abstract string GetKennung();
 
         public virtual void Reise(double strecke)
         {
