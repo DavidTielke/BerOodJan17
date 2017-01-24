@@ -3,24 +3,18 @@ using System.Collections.Generic;
 
 namespace _7Vererbung
 {
-    public class Auto : Fahrzeug
+    public sealed class Auto : Fahrzeug
     {
-        private readonly List<Schaden> _schäden;
-        private readonly Reifen[] _reifen;
-        private readonly Motor _motor;
-
         public double KmStand { get; private set; }
 
-        public double Tankstand { get; private set; }
-
-        private double Verbrauch { get; set; }
-
-        public Person Fahrer { get; set; }
-
         public Auto()
+            : base()
         {
-            _motor = new Motor(3000, 258);
-            _schäden = new List<Schaden>();
+            _motoren = new Motor[]
+            {
+                new Motor(3000, 258) 
+            };
+
             _reifen = new Reifen[]{
                 new Reifen(),
                 new Reifen(),
@@ -29,43 +23,11 @@ namespace _7Vererbung
             };
         }
 
-        public void AddSchaden(Schaden schaden)
+        public override void Reise(double strecke)
         {
-            _schäden.Add(schaden);
-        }
-
-        public IReadOnlyCollection<Schaden> GetSchäden()
-        {
-            return _schäden.AsReadOnly();
-        }
-
-
-        public void Fahre(double strecke)
-        {
-            if (Fahrer != null)
-            {
-                Console.WriteLine("Kann nicht ohne Fahrer fahren.");
-                return;
-            }
-
-            var verbrauch = Verbrauch / 100 * strecke;
-            Tankstand -= verbrauch;
+            base.Reise(strecke);
             KmStand += strecke;
-
-            for (int index = 0; index < _reifen.Length; index++)
-            {
-                _reifen[index].Abnutzen(strecke);
-            }
-
-            //_reifen.ToList().ForEach(r => r.Abnutzen(strecke));
-
-            Console.WriteLine("Fahre " + strecke + " km und verbrauche " + verbrauch + " L");
         }
 
-        public void Tanke(double menge)
-        {
-            Tankstand += menge;
-            Console.WriteLine("Tanke " + menge + " L");
-        }
     }
 }

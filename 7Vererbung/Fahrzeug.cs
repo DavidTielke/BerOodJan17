@@ -5,15 +5,20 @@ using System.Text;
 
 namespace _7Vererbung
 {
-    public class Fahrzeug
+    public abstract class Fahrzeug
     {
         protected List<Schaden> _schäden;
         protected Reifen[] _reifen;
-        protected Motor _motor;
+        protected Motor[] _motoren;
 
         public double Tankstand { get; protected set; }
         protected double Verbrauch { get; set; }
         public Person Fahrzeugführer { get; set; }
+
+        public Fahrzeug()
+        { 
+            _schäden = new List<Schaden>();
+        }
 
         public void AddSchaden(Schaden schaden)
         {
@@ -29,6 +34,26 @@ namespace _7Vererbung
         {
             Tankstand += menge;
             Console.WriteLine("Tanke " + menge + " L");
+        }
+
+
+
+        public virtual void Reise(double strecke)
+        {
+            if (Fahrzeugführer != null)
+            {
+                Console.WriteLine("Kann nicht ohne Fahrzeugführer fahren.");
+                return;
+            }
+
+            var verbrauch = Verbrauch / 100 * strecke;
+            Tankstand -= verbrauch;
+
+            for (int index = 0; index < _reifen.Length; index++)
+            {
+                _reifen[index].Abnutzen(strecke);
+            }
+            Console.WriteLine("Reise " + strecke + " km und verbrauche " + verbrauch + " L");
         }
     }
 }

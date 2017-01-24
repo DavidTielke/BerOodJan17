@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5Tagesaufgabe", "5Tagesaufg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6WerteUndReferenztypen", "6WerteUndReferenztypen\6WerteUndReferenztypen.csproj", "{332123B8-9AA5-4C98-9B8D-10879FE49E92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7Vererbung", "7Vererbung\7Vererbung.csproj", "{C65E3600-1BA5-41C1-967E-90B9C7AA0005}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{332123B8-9AA5-4C98-9B8D-10879FE49E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{332123B8-9AA5-4C98-9B8D-10879FE49E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{332123B8-9AA5-4C98-9B8D-10879FE49E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65E3600-1BA5-41C1-967E-90B9C7AA0005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65E3600-1BA5-41C1-967E-90B9C7AA0005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65E3600-1BA5-41C1-967E-90B9C7AA0005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65E3600-1BA5-41C1-967E-90B9C7AA0005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
