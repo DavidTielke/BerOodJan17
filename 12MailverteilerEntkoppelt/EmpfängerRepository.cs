@@ -2,7 +2,7 @@
 
 namespace _12MailverteilerEntkoppelt
 {
-    class EmpfängerRepository
+    class EmpfängerRepository : IEmpfängerRepository
     {
         public EmpfängerRepository()
         {

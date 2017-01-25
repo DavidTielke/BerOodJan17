@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10MailVerteiler", "10MailVe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11TrennungDerImplementierung", "TrennungDerImplementierung\11TrennungDerImplementierung.csproj", "{8F9F7711-EA57-497D-8569-CC213D478E10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12MailverteilerEntkoppelt", "12MailverteilerEntkoppelt\12MailverteilerEntkoppelt.csproj", "{277538A6-06A5-4E3D-ADCF-9EE3FD877593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{8F9F7711-EA57-497D-8569-CC213D478E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F9F7711-EA57-497D-8569-CC213D478E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F9F7711-EA57-497D-8569-CC213D478E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277538A6-06A5-4E3D-ADCF-9EE3FD877593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277538A6-06A5-4E3D-ADCF-9EE3FD877593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277538A6-06A5-4E3D-ADCF-9EE3FD877593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277538A6-06A5-4E3D-ADCF-9EE3FD877593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace _10MailVerteiler
+namespace _12MailverteilerEntkoppelt
 {
     class Program
     {
         static void Main(string[] args)
         {
+            var repository = new EmpfängerRepository();
+
             var verteiler = new Mailverteiler();
             verteiler.Start();
 

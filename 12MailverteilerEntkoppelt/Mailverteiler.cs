@@ -5,13 +5,13 @@ namespace _12MailverteilerEntkoppelt
     class Mailverteiler
     {
         private readonly MailPoller _poller;
-        private readonly EmpfängerRepository _empfängerRepository;
+        private readonly IEmpfängerRepository _empfängerRepository;
         private readonly MailSender _mailSender;
 
-        public Mailverteiler()
+        public Mailverteiler(IEmpfängerRepository repository)
         {
             _poller = new MailPoller(this);
-            _empfängerRepository = new EmpfängerRepository();
+            _empfängerRepository = repository;
             _mailSender = new MailSender(this);
         }
 
