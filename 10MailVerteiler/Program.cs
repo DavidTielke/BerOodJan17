@@ -10,13 +10,10 @@ namespace _10MailVerteiler
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Mailverteiler gestartet");
-            Console.WriteLine("Polling gestartet");
-            Console.WriteLine("Neue Email erkannt");
-            Console.WriteLine("Email wird verteilt");
-            Console.WriteLine("Empfänger werden geladen");
-            Console.WriteLine("Email wird versendet");
-            Console.WriteLine("Email wurde versenden");
+            var verteiler = new Mailverteiler();
+            verteiler.Start();
+
+            Console.ReadKey();
         }
     }
 }
