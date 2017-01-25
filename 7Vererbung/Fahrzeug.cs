@@ -10,14 +10,16 @@ namespace _7Vererbung
         protected List<Schaden> _schäden;
         protected Reifen[] _reifen;
         protected Motor[] _motoren;
+        protected readonly VerbrauchsRechnerBase _verbrauchsRechner;
 
         public double Tankstand { get; protected set; }
         protected double Verbrauch { get; set; }
         public Person Fahrzeugführer { get; set; }
 
-        public Fahrzeug()
-        { 
+        public Fahrzeug(VerbrauchsRechnerBase verbrauchsRechner)
+        {
             _schäden = new List<Schaden>();
+            _verbrauchsRechner = verbrauchsRechner;
         }
 
         public void AddSchaden(Schaden schaden)
