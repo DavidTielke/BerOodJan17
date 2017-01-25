@@ -7,8 +7,8 @@ namespace _12MailverteilerEntkoppelt
         static void Main(string[] args)
         {
             var repository = new EmpfängerRepository();
-            var sender = new Sender();
-            var poller = new Poller();
+            var sender = new TwitterSender();
+            var poller = new FacebookPoller();
 
             var verteiler = new Mailverteiler(repository,sender,poller);
             verteiler.Start();

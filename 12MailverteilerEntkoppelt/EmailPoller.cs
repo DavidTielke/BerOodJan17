@@ -2,7 +2,7 @@
 
 namespace _12MailverteilerEntkoppelt
 {
-    class Poller : IPoller
+    class EmailPoller : IPoller
     {
         public IMailErkanntVerarbeiter Verarbeiter { get; set; }
 

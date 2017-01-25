@@ -2,7 +2,7 @@ using System;
 
 namespace _12MailverteilerEntkoppelt
 {
-    class Sender : ISender
+    class MailSender : ISender
     {
         public IMailVersendetVerarbeiter Verarbeiter { get; set; }
 
