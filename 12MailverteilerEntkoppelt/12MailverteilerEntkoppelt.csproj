@@ -45,8 +45,11 @@
   <ItemGroup>
     <Compile Include="EmpfängerRepository.cs" />
     <Compile Include="IEmpfängerRepository.cs" />
-    <Compile Include="MailPoller.cs" />
-    <Compile Include="MailSender.cs" />
+    <Compile Include="IMailverteiler.cs" />
+    <Compile Include="IPoller.cs" />
+    <Compile Include="ISender.cs" />
+    <Compile Include="Poller.cs" />
+    <Compile Include="Sender.cs" />
     <Compile Include="Mailverteiler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

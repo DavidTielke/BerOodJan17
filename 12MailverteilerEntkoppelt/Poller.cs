@@ -2,16 +2,11 @@
 
 namespace _12MailverteilerEntkoppelt
 {
-    class MailPoller
+    class Poller : IPoller
     {
-        private readonly Mailverteiler _mailverteiler;
+        public IMailErkanntVerarbeiter Verarbeiter { get; set; }
 
-        public MailPoller(Mailverteiler mailverteiler)
-        {
-            _mailverteiler = mailverteiler;
-        }
-
-        public void StartPoller()
+        public void Start()
         {
             Console.WriteLine("Polling gestartet");
             NeueMailErkannt();
@@ -20,7 +15,7 @@ namespace _12MailverteilerEntkoppelt
         private void NeueMailErkannt()
         {
             Console.WriteLine("Neue Email erkannt");
-            _mailverteiler.Verteile();
+            Verarbeiter.NeueMailErkannt();
         }
     }
 }

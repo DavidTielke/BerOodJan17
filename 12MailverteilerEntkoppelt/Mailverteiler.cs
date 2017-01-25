@@ -2,34 +2,41 @@
 
 namespace _12MailverteilerEntkoppelt
 {
-    class Mailverteiler
+    class Mailverteiler : IMailErkanntVerarbeiter, IMailVersendetVerarbeiter
     {
-        private readonly MailPoller _poller;
+        private readonly IPoller _poller;
         private readonly IEmpfängerRepository _empfängerRepository;
-        private readonly MailSender _mailSender;
+        private readonly ISender _sender;
 
-        public Mailverteiler(IEmpfängerRepository repository)
+        public Mailverteiler(IEmpfängerRepository repository, ISender sender, IPoller poller)
         {
-            _poller = new MailPoller(this);
             _empfängerRepository = repository;
-            _mailSender = new MailSender(this);
+            _sender = sender;
+            _sender.Verarbeiter = this;
+            _poller = poller;
+            _poller.Verarbeiter = this;
         }
 
         public void Start()
         {
             Console.WriteLine("Mailverteiler gestartet");
-            _poller.StartPoller();
+            _poller.Start();
         }
 
         public void Verteile()
         {
             Console.WriteLine("Email wird verteilt");
             _empfängerRepository.Lade();
-            _mailSender.Versende();
+            _sender.Versende();
         }
 
-        public void EmailVersendet()
+        public void NeueMailErkannt()
         {
+            Verteile();
+        }
+
+        public void MailVersendet()
+        { 
             Console.WriteLine("Email wurde versenden");
         }
     }

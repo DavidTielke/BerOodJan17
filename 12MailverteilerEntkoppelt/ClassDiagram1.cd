@@ -1,50 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="_12MailverteilerEntkoppelt.MailPoller">
-    <Position X="1" Y="1.5" Width="1.5" />
+  <Class Name="_12MailverteilerEntkoppelt.Poller">
+    <Position X="0.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAgA=</HashCode>
-      <FileName>MailPoller.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Poller.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_mailverteiler" />
-    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="_12MailverteilerEntkoppelt.MailSender">
-    <Position X="8" Y="1.5" Width="1.5" />
+  <Class Name="_12MailverteilerEntkoppelt.Sender">
+    <Position X="9.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>MailSender.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Sender.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_mailverteiler" />
-    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="_12MailverteilerEntkoppelt.Mailverteiler">
-    <Position X="4.25" Y="1.5" Width="1.5" />
+    <Position X="4.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAQAAICACAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <HashCode>AAgAAAEAACgCAAAAAAAAAAAAAAAAAAAAAAAAAAAABgA=</HashCode>
       <FileName>Mailverteiler.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_poller" />
-      <Field Name="_mailSender" />
       <Field Name="_empfängerRepository" />
+      <Field Name="_sender" />
+      <Field Name="_poller" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="_12MailverteilerEntkoppelt.EmpfängerRepository">
-    <Position X="4.25" Y="5.75" Width="1.5" />
+    <Position X="4.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>EmpfängerRepository.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="_12MailverteilerEntkoppelt.IEmpfängerRepository" Collapsed="true">
-    <Position X="7.75" Y="1.5" Width="1.5" />
+  <Interface Name="_12MailverteilerEntkoppelt.IEmpfängerRepository">
+    <Position X="4.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>IEmpfängerRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_12MailverteilerEntkoppelt.ISender">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>ISender.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Verarbeiter" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="_12MailverteilerEntkoppelt.IPoller">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPoller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Verarbeiter" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="_12MailverteilerEntkoppelt.IMailErkanntVerarbeiter">
+    <Position X="2.75" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>IMailverteiler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_12MailverteilerEntkoppelt.IMailVersendetVerarbeiter">
+    <Position X="5.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMailverteiler.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
