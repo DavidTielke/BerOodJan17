@@ -10,18 +10,17 @@ namespace _7Vererbung
         public double Flughöhe { get; private set; }
 
         public Flugzeug()
-            : base()
         {
             _reifen = new Reifen[]
             {
-                new Reifen(), 
-                new Reifen(), 
+                new Reifen(),
+                new Reifen(),
                 new Reifen(),
             };
 
             _motoren = new Motor[]
             {
-                new Motor(2000, 180), 
+                new Motor(2000, 180),
                 new Motor(2000, 180),
             };
         }
@@ -38,12 +37,36 @@ namespace _7Vererbung
 
         public void Fliege(double strecke)
         {
-            Tankstand -= Verbrauch/100*strecke;
+            var zeit = new TimeSpan(0,0,30);
+            Tankstand -= new VerbrauchsRechner().BeiVerbrauchVon(23).BerechneFürZeit(zeit);
+            // var verb = new VerbrauchsRechner().BeiVerbrauchVon(8.5).BerechneFürStrecke(546);
         }
+
 
         public override string GetKennung()
         {
             return "D-4711";
+        }
+    }
+
+    class VerbrauchsRechner
+    {
+        private double _verbrauch;
+
+        public VerbrauchsRechner BeiVerbrauchVon(double verbrauch)
+        {
+            _verbrauch = verbrauch;
+            return this;
+        }
+
+        public double BerechneFürStrecke(double strecke)
+        {
+            return _verbrauch / 100 * strecke;
+        }
+
+        public double BerechneFürZeit(TimeSpan zeit)
+        {
+            return zeit.Hours*_verbrauch;
         }
     }
 }
